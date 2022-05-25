@@ -10,5 +10,6 @@ Para o exemplo, foi utilizado o Python 3.8.1; Bibliotecas: Modbus TCP - pyModbus
 O CLP Utilizado foi o Codesys versão 3.5, a configuração está disponível neste repositório.
 
 Utilizando o mesmo conceito que outras aplicações com Modbus, porém com a biblioteca Flask criando uma API para consulta ou escrita no CLP.
+Instalar o Insomnia para testar as requisições.
 
 Autor: Douglas Silva.
