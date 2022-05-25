@@ -1,15 +1,15 @@
 from flask import  Flask, request, jsonify, json
-import requests
 from pyModbusTCP.client import ModbusClient
-import time
+
 
 # Inicia configuração TCP
 c = ModbusClient(host="localhost", port=502, unit_id=1, auto_open=True)
-# Parametros conexão
+# Parametros conexão Modbus
 c = ModbusClient()
 c.host("localhost")
 c.port(502)
 c.unit_id(1)
+#Configura APP para API
 app = Flask(__name__)
 
 #Rota para leitura
@@ -31,6 +31,8 @@ def leitura():
         c.close()
         return "Erro na leitura" 
 
+
+#Rota para Escrita
 @app.route("/write", methods = ['POST'])
 def escrita():
     # Valores recebidos
